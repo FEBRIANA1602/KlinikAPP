@@ -1,5 +1,5 @@
 // Mengimport package 'flutter/material.dart' yang berisi komponen UI Flutter.
-// Package ini digunakan untuk membangun antarmuka pengguna (UI) dalam aplikasi Flutter.
+// ini digunakan untuk membangun antarmuka pengguna (UI) dalam aplikasi Flutter.
 
 import 'package:flutter/material.dart';
 
