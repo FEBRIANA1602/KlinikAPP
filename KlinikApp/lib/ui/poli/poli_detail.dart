@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+//mengimport flutter/material.dart
 import 'poli_page.dart';
+//mengimport poli_page.dart
 import 'poli_update_form.dart';
+//mengimport poli_update
 import '../model/poli.dart';
+//mengimport model/poli.dart
 
 class PoliDetail extends StatefulWidget {
+//Pada kelas ini terdiri dari PoliDetail sebagai widget dan PoliDetailState sebagai state
   final Poli poli;
 
   const PoliDetail({super.key, required this.poli});
@@ -13,6 +18,7 @@ class PoliDetail extends StatefulWidget {
 }
 
 class _PoliDetailState extends State<PoliDetail> {
+//Kelas _PoliDetailState berisi logika untuk menampilkan detail poli dan tombol-tombol interaksi.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +36,8 @@ class _PoliDetailState extends State<PoliDetail> {
             children: [
               _tombolUbah(),
               _tombolHapus(),
+              //build method, kelas _PoliDetailState membuat sebuah Scaffold yang berisi AppBar dengan judul "Detail Poli" dan
+              //sebuah Column yang berisi jarak vertikal ,teks yang menampilakn poli,
             ],
           )
         ],
@@ -85,3 +93,6 @@ class _PoliDetailState extends State<PoliDetail> {
     );
   }
 }
+//Baris yang berisi dua tombol: "Ubah" dan "Hapus"
+//Tombol "Ubah" (_tombolUbah()) akan membuka halaman PoliUpdateForm dan mengirimkan objek Poli yang sedang ditampilkan.
+//Tombol "Hapus" (_tombolHapus()) akan menampilkan sebuah dialog konfirmasi. Jika pengguna memilih "Ya", maka aplikasi akan berpindah ke halaman PoliPage (menggunakan Navigator.pushReplacement).
